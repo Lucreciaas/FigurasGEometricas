@@ -37,7 +37,7 @@ public class Rectangulo extends FiguraGeometrica {
     }
 
 
-    public int getSuperficie() {
+    public double getSuperficie() {
         return lado1 * lado2;        
     }
 
