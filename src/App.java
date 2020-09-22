@@ -130,7 +130,7 @@ public class App {
         private void MostrarSuperficies() {
         for (FiguraGeometrica f : figuras) {
             // f -> tipo estatico FiguraGeometrica -> verifica el compilador
-            System.out.println(f.getSuperficie());
+            System.out.println("Superficie: " + f.getSuperficie());
             // dado el polimorfismo en la herencia
             // en ejecucion -> f -> tipo dinamico -> verifica la JVM
         }
@@ -139,7 +139,7 @@ public class App {
         private void MostrarPerimetros() {
         for (FiguraGeometrica f : figuras) {
             // f -> tipo estatico FiguraGeometrica -> verifica el compilador
-            System.out.println(f.getPerimetro());
+            System.out.println("Perimetro: " + f.getPerimetro());
             // dado el polimorfismo en la herencia
             // en ejecucion -> f -> tipo dinamico -> verifica la JVM
         }
