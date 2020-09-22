@@ -37,8 +37,10 @@ public class App {
     public static void main(String[] args) throws Exception {
         App miAplicacion = new App();
         miAplicacion.ejecutar();
-        // miAplicacion.imagenes();
+       // miAplicacion.imagenes();
         miAplicacion.triangulos();
+        miAplicacion.circulos();
+        miAplicacion.rectangulos();
     }
     public void imagenes () {
         Dibujo dibujo = new Dibujo();
@@ -59,6 +61,37 @@ public class App {
         miVentana.setColorDeLapiz(t2.getColor());
         miVentana.rellenarTriangulo(t2.getPos().getX(), t2.getPos().getY(), t2.getBase(), t2.getAltura());
     }
+    
+     public void circulos () {
+        Circulo c1 = new Circulo (100,350,400);
+        c1.getPos().setX(350);
+        c1.getPos().setY(400);
+        c1.setColor(Color.GREEN);
+        miVentana.setColorDeLapiz(c1.getColor());
+        miVentana.rellenarCirculo(c1.getPos().getX(), c1.getPos().getY(), c1.getRadio());
+        Circulo c2 = new Circulo(200,300,100);
+        c2.getPos().setX(300);
+        c2.getPos().setY(100);
+        c2.setColor(Color.YELLOW);
+        miVentana.setColorDeLapiz(c2.getColor());
+        miVentana.rellenarCirculo(c2.getPos().getX(), c2.getPos().getY(), c2.getRadio());
+    }
+     
+        public void rectangulos () {
+        Rectangulo r1 = new Rectangulo (150,100,150,400);
+        r1.getPos().setX(150);
+        r1.getPos().setY(400);
+        r1.setColor(Color.darkGray);
+        miVentana.setColorDeLapiz(r1.getColor());
+        miVentana.rellenarRectangulo(r1.getPos().getX(), r1.getPos().getY(), r1.getLado1(), r1.getLado2());
+        Rectangulo r2 = new Rectangulo(100,50,200,100);
+        r2.getPos().setX(200);
+        r2.getPos().setY(100);
+        r2.setColor(Color.PINK);
+        miVentana.setColorDeLapiz(r2.getColor());
+        miVentana.rellenarRectangulo(r2.getPos().getX(), r2.getPos().getY(), r2.getLado1(), r2.getLado2());
+    }
+          
     /**
      * Metodo para ejecutar las diferentes actividades
      */
@@ -71,7 +104,7 @@ public class App {
         MostrarSuperficies();
         MostrarPerimetros();
         // Variable local para un subconjunto de los circulos
-       // ArrayList<Circulo> enRango;
+        //ArrayList<Circulo> enRango;
         // Selecciona los circulos que cumplen la condicion del radio
         //enRango = CirculosConRadioEnRango(40, 70);
         // Establece el color de los circulos de la coleccion
@@ -148,11 +181,11 @@ public class App {
      * @param lista Los circulos a pintar
      * @param color El color para pintar los circulos
      */
-    public void PintarCirculos(ArrayList<Circulo> lista, Color color) {
+   /* public void PintarCirculos(ArrayList<Circulo> lista, Color color) {
         for (Circulo c : lista) {
             c.setColor(color);
         }
-    }
+    }*/
     // TODO - PintarRectangulos()
     /**
      * Genera los objetos graficos en forma aleatoria

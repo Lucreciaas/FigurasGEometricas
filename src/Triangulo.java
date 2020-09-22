@@ -13,12 +13,12 @@ public class Triangulo extends FiguraGeometrica {
     public Triangulo (int base, int altura, int x, int y) {
         super(x, y);
         this.base = base;
-        this.altura = altura;
+        this.altura = altura; 
     }
-     public double getPerimetro () {
-        return 0.0;
+   
+    public double getPerimetro () {
+        return Math.sqrt((base/2*base/2)+altura*altura)*2+base;
     }
-
     public double getSuperficie () {
         return base * altura / 2.0;
     }

@@ -42,7 +42,7 @@ public class Rectangulo extends FiguraGeometrica {
     }
 
      public double getPerimetro () {
-        return 0.0;
+        return lado1*2 + lado2*2;
     }
    
     public int getLado1() {
